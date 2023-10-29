@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo de Ventas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body onclick="Playaudio()">
+    <!-- Elemento de audio para reproducir música -->
+    <audio id="Musica" src="/audio/thunderstruck.mp3" loop></audio>
+    
+    <!-- Ventana emergente de bienvenida -->
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <h2>Bienvenido a la Tienda</h2>
+            <p>¡Explora nuestra increíble selección de productos!</p>
+            <button class="close-popup" id="close-popup">Cerrar</button>
+        </div>
+    </div>
+
+    <!-- Catálogo de productos -->
+    <div class="catalog">
+        <h2>Catálogo de Productos</h2>
+        <!-- Producto 1: CPU Completa -->
+        <div class="product">
+            <img src="/img/compu.jpeg" alt="CPU Completa">
+            <span class="product-name">CPU Completa</span>
+            <span class="product-price">$1000</span>
+            <button onclick="addToCart('CPU Completa', 1000, '/img/compu.jpeg')">Agregar al Carrito</button>
+        </div>
+        
+        <!-- Producto 2: Mouse -->
+        <div class="product">
+            <img src="/img/mouse.jpeg" alt="Mouse">
+            <span class="product-name">Mouse</span>
+            <span class="product-price">$50</span>
+            <button onclick="addToCart('Mouse', 50, '/img/mouse.jpeg')">Agregar al Carrito</button>
+        </div>
+    </div>
+
+    <!-- Carrito de compras -->
+    <div class="cart">
+        <h2>Carrito de Compras</h2>
+        <div id="cart-items"></div>
+        <div id="cart-total">Total: $0.00</div>
+        <button id="buy-button" onclick="buyProducts()">Comprar</button>
+    </div>
+
+    <!-- Script de JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

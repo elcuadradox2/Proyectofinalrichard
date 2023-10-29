@@ -1,0 +1,190 @@
+/* Estilos CSS para la página web */
+
+/* Estilos generales del cuerpo de la página */
+body {
+    font-family: 'Arial', sans-serif; /* Tipo de fuente */
+    text-align: center; /* Alineación de texto */
+    background: #2A363B; /* Fondo */
+    margin: 0; /* Sin márgenes */
+    padding: 20px; /* Espacio alrededor del contenido */
+    transition: background-color 0.5s; /* Transición de color de fondo */
+    color: #99B898; /* Color de texto y botones */
+}
+
+/* Estilos para los encabezados */
+h1 {
+    font-size: 2em; /* Tamaño de la fuente */
+    color: #333; /* Color del texto */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra del texto */
+    animation: color-change 2s infinite; /* Animación de cambio de color */
+}
+
+/* Animación de cambio de color */
+@keyframes color-change {
+    0% { color: #333; }
+    50% { color: #ff7f50; }
+    100% { color: #333; }
+}
+
+/* Estilos para el catálogo y el carrito */
+.catalog, .cart {
+    background-color: #fff; /* Fondo */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+    padding: 20px; /* Espaciado interno */
+    margin: 20px; /* Márgenes externos */
+    display: inline-block; /* Mostrar en línea */
+    width: 45%; /* Ancho del elemento */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transición de transformación y sombra */
+    position: relative; /* Posición relativa */
+}
+
+/* Efecto de crecimiento al pasar el ratón sobre el catálogo y el carrito */
+.catalog:hover, .cart:hover {
+    transform: scale(1.05); /* Escala aumentada */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+}
+
+/* Estilos para productos e ítems del carrito */
+.product, .cart-item {
+    margin: 10px; /* Márgenes */
+    padding: 10px; /* Espaciado interno */
+    border: 1px solid #ccc; /* Borde y color */
+    background-color: #f9f9f9; /* Fondo */
+    position: relative; /* Posición relativa */
+    transition: background-color 0.3s, transform 0.3s; /* Transición de fondo y transformación */
+}
+
+/* Efecto de resaltado al pasar el ratón sobre productos e ítems del carrito */
+.product:hover, .cart-item:hover {
+    background-color: #e9e9e9; /* Fondo más claro */
+    transform: scale(1.02); /* Escala aumentada */
+}
+
+/* Estilos para imágenes de productos e ítems del carrito */
+.product img, .cart-item img {
+    max-width: 100px; /* Tamaño máximo de imagen */
+    display: block; /* Mostrar como bloque */
+    margin: 0 auto; /* Centrar la imagen */
+}
+
+/* Estilos para botones de productos e ítems del carrito */
+.product button, .cart-item button {
+    background-color: #99B898; /* Color de fondo del botón */
+    color: white; /* Color de texto */
+    padding: 8px 14px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de la fuente */
+    border: none; /* Sin borde */
+    border-radius: 4px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor al pasar el ratón */
+    transition: background-color 0.3s, transform 0.3s; /* Transición de color de fondo y transformación */
+    position: absolute; /* Posición absoluta */
+    right: 10px; /* Distancia desde la derecha */
+    top: 10px; /* Distancia desde arriba */
+}
+
+/* Efecto de resaltado al pasar el ratón sobre botones de productos e ítems del carrito */
+.product button:hover, .cart-item button:hover {
+    background-color: #FF5733; /* Color de fondo al pasar el ratón */
+    transform: scale(1.1); /* Escala aumentada */
+}
+
+/* Estilos específicos para el carrito */
+.cart {
+    background-color: #fff; /* Fondo */
+    vertical-align: top; /* Alineación vertical */
+    animation: bounce 1s infinite alternate; /* Animación de rebote */
+}
+
+/* Estilos para botones */
+button {
+    margin-top: 5px; /* Márgenes superiores */
+    transition: background-color 0.3s, transform 0.3s; /* Transición de color de fondo y transformación */
+}
+
+/* Efecto de resaltado al pasar el ratón sobre botones */
+button:hover {
+    background-color: #FF5733; /* Color de fondo al pasar el ratón */
+    transform: scale(1.1); /* Escala aumentada */
+}
+
+/* Estilos para el contenedor de ítems del carrito */
+#cart-items {
+    max-height: 150px; /* Altura máxima */
+    overflow-y: auto; /* Desplazamiento vertical automático */
+    margin-bottom: 10px; /* Márgenes inferiores */
+}
+
+/* Estilos para el total del carrito */
+#cart-total {
+    font-size: 1.2em; /* Tamaño de la fuente */
+    font-weight: bold; /* Negrita */
+    color: #99B898; /* Color de texto del total */
+}
+
+/* Animación de rebote */
+@keyframes bounce {
+    0% {
+        transform: translateY(0); /* Sin traslación vertical */
+    }
+    100% { 
+        transform: translateY(-10px); /* Traslación hacia arriba */
+    }
+}
+
+/* Estilos para la ventana emergente */
+.popup {
+    display: none; /* Ocultar inicialmente */
+    position: fixed; /* Posición fija */
+    top: 0; /* Desde la parte superior */
+    left: 0; /* Desde la parte izquierda */
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Altura completa */
+    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    z-index: 999; /* Índice de apilamiento alto */
+}
+
+/* Contenido de la ventana emergente */
+.popup-content {
+    background: #fff; /* Fondo blanco */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    text-align: center; /* Alineación de texto */
+}
+
+/* Mostrar la ventana emergente cuando tiene la clase "active" */
+.popup.active {
+    display: flex; /* Mostrar como flexbox */
+}
+
+/* Estilos para el botón de cerrar la ventana emergente */
+.close-popup {
+    background: #99B898; /* Color de fondo del botón */
+    color: white; /* Color de texto */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de la fuente */
+    cursor: pointer; /* Cursor al pasar el ratón */
+    border-radius: 4px; /* Bordes redondeados */
+    margin-top: 10px; /* Márgenes superiores */
+}
+
+/* Estilos para el botón de compra */
+#buy-button {
+    background-color: #99B898; /* Color de fondo del botón */
+    color: white; /* Color de texto */
+    padding: 8px 14px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de la fuente */
+    border: none; /* Sin borde */
+    border-radius: 4px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor al pasar el ratón */
+    transition: background-color 0.3s, transform 0.3s; /* Transición de color de fondo y transformación */
+}
+
+/* Efecto de resaltado al pasar el ratón sobre el botón de compra */
+#buy-button:hover {
+    background-color: #FF5733; /* Color de fondo al pasar el ratón */
+    transform: scale(1.1); /* Escala aumentada */
+}
